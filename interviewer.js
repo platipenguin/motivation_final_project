@@ -199,6 +199,7 @@ function nextClicked() {
 		document.getElementById("nextButton").className = "hidden";
 		document.getElementById("testBox").className = "mainDisplay hidden";
 		document.getElementById("reportBox").className = "mainDisplay";
+		// TODO: Insert agent names into email from localStorage
 	}
 	else if (document.getElementById("nextButton").innerHTML == "Create Hypothesis")
 	{
@@ -288,7 +289,8 @@ function sendEmail() {
 	}
 	else
 	{
-		// TODO: Move to final email screen
+		document.getElementById("reportBox").className = "mainDisplay hidden";
+		document.getElementById("finalEmailBox").className = "mainDisplay";
 	}
 }
 
