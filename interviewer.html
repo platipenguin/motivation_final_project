@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Digital Case</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="interviewer.css">
+		<script src="script.js"></script>
+        <script src="interviewer.js"></script>
+	</head>
+    <body onload="init();">
+		<table class="container" style="width:100%">
+			<td style="width:70%">
+				<div id="textBox" class="mainDisplay" onmousedown="finishTyping();">
+					<div id="boxHeader">
+						<p id="name">Jakob D.</p>
+						<p id="response">"This is a response to the question you just posed to me. I am answering your question."</p>
+					</div>
+					<p id="0" class="question" onclick="questionClicked(0);"></p>
+					<p id="1" class="question" onclick="questionClicked(1);"></p>
+					<p id="2" class="question" onclick="questionClicked(2);"></p>
+					<p id="3" class="question" onclick="questionClicked(3);"></p>
+					<p id="4" class="question" onclick="questionClicked(4);"></p>
+					<p id="5" class="question" onclick="questionClicked(5);"></p>
+					<p id="6" class="question" onclick="questionClicked(6);"></p>
+					<p id="7" class="question" onclick="questionClicked(7);"></p>
+				</div>
+				<div id="hypothesisBox" class="mainDisplay hidden">
+					<h2>Hypothesis:</h2>
+					<p>Contaminated <select id="foods"></select> from <select id="locations"></select> is causing the outbreak.</p>
+					<button id="testButton" onclick="testHypothesis();">Test Hypothesis</button>
+				</div>
+				<div id="testBox" class="mainDisplay hidden">
+					<p id="testText" style="font-family: Lucida Console">Defining Control Group...</p>
+					<div class="loadingBorder">
+						<div id="loadingBar" class="loadingBarEmpty"></div>
+					</div>
+				</div>
+				<div id="reportBox" class="mainDisplay hidden">
+					<p class="email">
+						Director Greene,<br><br>
+						&#9;Based on our investigation, we have determined that alfalfa sprouts contaminated with <i>Salmonella enterica</i> from Schmidt's Organic Grocery are the source of the epidemic. 
+						After discussing this case, we would like to make the following recommendations to help stem the outbreak and prevent similar epidemics in the future:
+					</p>
+					<textarea id="report" class="email"></textarea>
+					<p id="regards" class="email">
+						Regards,<br><br>
+						Agent ** & Agent *
+					</p>
+					<button id="sendEmailButton" onclick="sendEmail();">Send Email</button>
+				</div>
+			</td>
+			<td style="width:30%">
+				<textarea id="notes" class="hidden" spellcheck=false></textarea>
+			</td>
+		</table>
+        
+		
+		<button id="notesButton" class="bottomButton" onclick="toggleNotes();">Show Notepad</button>
+		<button id="nextButton" class="bottomButton" onclick="nextClicked();">Create Hypothesis</button>
+    </body>
+</html>
