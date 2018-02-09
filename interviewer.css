@@ -112,7 +112,25 @@
 	float: right;
 }
 
+#mailAlert {
+	text-align: center;
+	font-family: Arial;
+	font-size: 1.5em;
+	color: white;
+}
 
+#mailImg {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	opacity: 0.0;
+}
+
+#mailButton {
+	position: relative;
+	width: 10%;
+	left: 45%;
+}
 
 
 

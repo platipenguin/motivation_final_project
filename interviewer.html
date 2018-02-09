@@ -48,7 +48,11 @@
 					</p>
 					<button id="sendEmailButton" onclick="sendEmail();">Send Email</button>
 				</div>
-				<!-- TODO: Add window for opening the final email -->
+				<div id="gotMailBox" class="mainDisplay hidden">
+					<p id="mailAlert">You've got mail!</p>
+					<img src="images/envelope.png" id="mailImg"></img>
+					<button id="mailButton" onclick="openEmail();">Open Mail<img>
+				</div>
 				<div id="finalEmailBox" class="mainDisplay hidden">
 					<p class="email">
 						Agents,<br><br>

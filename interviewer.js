@@ -290,8 +290,21 @@ function sendEmail() {
 	else
 	{
 		document.getElementById("reportBox").className = "mainDisplay hidden";
-		document.getElementById("finalEmailBox").className = "mainDisplay";
+		document.getElementById("gotMailBox").className = "mainDisplay";
+		setTimeout(startMailAnimation, 100);
 	}
+}
+
+function startMailAnimation() {
+	document.getElementById("mailAlert").style = "color: black; transition: color 4s;";
+	document.getElementById("mailImg").style = "opacity: 1.0; transition: opacity 4s;";
+}
+
+// Called when user clicks the 'Open Mail' button
+// Moves to the final email screen
+function openEmail() {
+	document.getElementById("gotMailBox").className = "mainDisplay hidden";
+	document.getElementById("finalEmailBox").className = "mainDisplay";
 }
 
 // Returns the current interview hub.
