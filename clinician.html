@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Digital Case</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="clinician.css">
+        <script src="clinician.js"></script>
+	</head>
+    <body onload="init();">
+        <table class="container" style="width: 100%;">
+            <td style="width: 40%;">
+                <div class="dashboard">
+                </div>
+            </td>
+            <td style="width: 20%;">
+                <div id="progressTests">
+                    <p class="title">Running Tests</p>
+                </div>
+                <div id="completeTests" class="vertical">
+                    <p class="title">Completed Tests</p>
+                </div>
+            </td>
+            <td style="width: 20%;">
+                <div class="dashboard vertical">
+                </div>
+            </td>
+            <td style="width: 20%;">
+                <textarea id="notes" spellcheck=false></textarea>
+            </td>
+        </table>
+        <div id="pathogenList" class="pathogenWrapper hidden">
+            <table class="search-table">
+                <tr>
+                    <th><i>Norovirus</i></th>
+                    <th><i>Campylobacter jejuni</i></th>
+                    <th><i>Clostridium perfringens</i></th>
+                    <th><i>Salmonella enterica</i></th>
+                    <th><i>Staphylococcus aureus</i></th>
+                    <th><i>Entamoeba histolytica</i></th>
+                    <th><i>Giardia lamblia</i></th>
+                </tr>
+                <td class="pathogen">
+                    <img src="images/image_norovirus.png" class="pathImg">
+                    <ul>
+                        <li><b>Type: </b>Virus</li>
+                        <li><b>Symptoms: </b>Severe vomiting, diarrhea, stomach pain</li>
+                        <li><b>Sources: </b>Bodily fluids, shellfish, vegetables</li>
+                        <li><b>Onset: </b>1.5 days post-exposure</li>
+                        <li><b>Diagnosis: </b>PCR</li>
+                    </ul>
+                    
+                </td>
+                <td class="pathogen">
+                    <img src="images/image_campylobacter.png" class="pathImg">
+                    <ul>
+                        <li><b>Type: </b>Bacteria</li>
+                        <li><b>Symptoms: </b>Fever, watery/bloody diarrhea, vomiting, nausea</li>
+                        <li><b>Sources: </b>Poultry, dairy, bodily fluids, untreated water</li>
+                        <li><b>Onset: </b>3 days post-exposure</li>
+                        <li><b>Diagnosis: </b>Low O2 Mueller Hinton Agar Culture</li>
+                    </ul>
+                </td>
+                <td class="pathogen">
+                    <img src="images/image_clostridium.png" class="pathImg">
+                    <ul>
+                        <li><b>Type: </b>Bacteria</li>
+                        <li><b>Symptoms: </b>Abdominal pain, watery/bloody diarrhea, vomiting, nausea</li>
+                        <li><b>Sources: </b>Unrefrigerated cooked food</li>
+                        <li><b>Onset: </b>16 hours post-exposure</li>
+                        <li><b>Diagnosis: </b>TSC Agar Culture, CPE Toxin ELISA</li>
+                    </ul>
+                </td>
+                <td class="pathogen">
+                    <img src="images/image_salmonella.png" class="pathImg">
+                    <ul>
+                        <li><b>Type: </b>Bacteria</li>
+                        <li><b>Symptoms: </b>Nausea, vomiting, abdominal cramps, diarrhea, fever, headache</li>
+                        <li><b>Sources: </b>Bodily fluids, meats, vegetables</li>
+                        <li><b>Onset: </b>2 days post-exposure</li>
+                        <li><b>Diagnosis: </b>Bismuth Sulfite Agar Culture</li>
+                    </ul>
+                </td>
+                <td class="pathogen">
+                    <img src="images/image_staphylococcus.png" class="pathImg">
+                    <ul>
+                        <li><b>Type: </b>Bacteria</li>
+                        <li><b>Symptoms: </b>Nausea, abdominal cramps, vomiting, diarrhea, headache</li>
+                        <li><b>Sources: </b>Meat, unrefrigerated cream</li>
+                        <li><b>Onset: </b>4 hours post-exposure</li>
+                        <li><b>Diagnosis: </b>BP+RPF Agar Culture, Staph Toxin Assay</li>
+                    </ul>
+                </td>
+                <td class="pathogen">
+                    <img src="images/image_entamoeba.png" class="pathImg">
+                    <ul>
+                        <li><b>Type: </b>Parasite</li>
+                        <li><b>Symptoms: </b>Mucusy/bloody diarrhea, nausea, fatigue, weight loss</li>
+                        <li><b>Sources: </b>Bodily fluids, untreated water</li>
+                        <li><b>Onset: </b>1 week post-exposure</li>
+                        <li><b>Diagnosis: </b> Microscopy, Dot Blot Assay</li>
+                    </ul>
+                </td>
+                <td class="pathogen">
+                    <img src="images/image_giardia.png" class="pathImg">
+                    <ul>
+                        <li><b>Type: </b>Parasite</li>
+                        <li><b>Symptoms: </b>Diarrhea, abdominal cramps, weight loss</li>
+                        <li><b>Sources: </b>Bodily fluids, vegetables</li>
+                        <li><b>Onset: </b>1 week post-exposure</li>
+                        <li><b>Diagnosis: </b>Microscopy</li>
+                    </ul>
+                </td>
+            </table>
+        </div>
+        <button id="pathogensButton" class="bottomButton" onclick="pathogens();">Show Pathogens</button>
+        <button class="bottomButton" disabled>Run Test</button>
+        <button class="bottomButton">Write Report</button>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+html {
+    font-family: sans-serif;
+}
+
+.dashboard {
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    height: 600px;
+}
+
+.pathogenWrapper {
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    overflow-x: scroll;
+}
+
+.search-table{
+    table-layout: fixed;
+}
+
+th {
+    border-style: double;
+}
+
+li {
+    margin-left: 180px;
+    margin-bottom: 5px;
+}
+
+.pathogen {
+    min-width: 500px;
+    border-style: double;
+}
+
+.pathImg {
+    float: left;
+}
+
+.bottomButton {
+	width: 200px;
+	height: 50px;
+	margin: 10px;
+	font-size: 1.2em;
+}
+
+.vertical {
+    overflow-y: scroll;
+}
+
+.horizontal {
+    table-layout: fixed;
+}
+
+.title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border-bottom-style: solid;
+}
+
+.hidden {
+    display: none;
+}
+
+#progressTests {
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    height: 200px;
+}
+
+#completeTests {
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    height: 393px;
+}
+
+#notes {
+	min-height: 600px;
+	min-width: 100%;
+	font-size: 1.2em;
+	border-style: solid;
+    border-width: 2px;
+	background-color: SeaShell;
+	resize: none;
+}
+
+#pathList {
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    height: 150px;
+}
+
+#pathListLabel {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border-bottom-style: solid;
+}
+
+
+
+
+
