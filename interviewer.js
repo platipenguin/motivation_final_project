@@ -1,6 +1,6 @@
 /**
 * This file contains the logic which controls the interview half of the digital case study.
-* It handles reading in the interview script from the script.json file, displaying the interview, and changing dialogue options as the user moves through the interview.
+* It handles reading in the interview script from the script.js file, displaying the interview, and changing dialogue options as the user moves through the interview.
 * The script keeps track of the user's position in the interview with the hubChain. As the user moves down hubs, each new hub is added to the end of the array to facilitate moving backwards easier.
 */
 

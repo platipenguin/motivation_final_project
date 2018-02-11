@@ -1,3 +1,4 @@
+// This file contains the data for conversations in the interviewer side of the activity.
 scriptData = {
 	"conv0":{
 		"typingRate":40,

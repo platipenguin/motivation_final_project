@@ -4,12 +4,16 @@
         <title>Digital Case</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" href="clinician.css">
+		<script src="testData.js"></script>
         <script src="clinician.js"></script>
 	</head>
     <body onload="init();">
         <table class="container" style="width: 100%;">
             <td style="width: 40%;">
-                <div class="dashboard">
+                <div id="bench" class="dashboard">
+					<p id="testInfo"></p>
+					<img id="testImg">
+					<p id="testResult"></p>
                 </div>
             </td>
             <td style="width: 20%;">
@@ -21,11 +25,12 @@
                 </div>
             </td>
             <td style="width: 20%;">
-                <div class="dashboard vertical">
+                <div id="tests" class="dashboard vertical">
+					<p class="title">All Tests</p>
                 </div>
             </td>
             <td style="width: 20%;">
-                <textarea id="notes" spellcheck=false></textarea>
+                <textarea id="notes" class="hidden" spellcheck=false></textarea>
             </td>
         </table>
         <div id="pathogenList" class="pathogenWrapper hidden">
@@ -112,8 +117,9 @@
                 </td>
             </table>
         </div>
-        <button id="pathogensButton" class="bottomButton" onclick="pathogens();">Show Pathogens</button>
-        <button class="bottomButton" disabled>Run Test</button>
+        <button id="notesButton" class="bottomButton" onclick="notepad();">Show Notepad</button>
+		<button id="pathogensButton" class="bottomButton" onclick="pathogens();">Show Pathogens</button>
+        <button id="runButton" class="bottomButton" disabled onclick="runTest();">Run Test</button>
         <button class="bottomButton">Write Report</button>
     </body>
 </html>
