@@ -40,18 +40,22 @@ function testOptionClicked(clickedID) {
 			document.getElementById(clickedID).disabled = true;
 	}
 	
-	if (runningTests.includes(id)) // Let user cancel tests that are in progress
-	{
-		document.getElementById("runButton").disabled = false;
-		document.getElementById("runButton").innerHTML = "Cancel Test";
-	}
 	if (!completedTests.includes(testData.data[id].name)) // Show info about test and prepare run button
 	{
 		document.getElementById("testInfo").className = "";
 		document.getElementById("testInfo").innerHTML = `${testData.data[id].name}<br><br>${testData.data[id].info}<br><br>Time: ${testData.data[id].time}s`;
 		document.getElementById("testImg").src = "";
 		document.getElementById("testResult").innerHTML = "";
-		document.getElementById("runButton").disabled = false;
+		if (runningTests.includes(id)) // Let user cancel tests that are in progress
+		{
+			document.getElementById("runButton").disabled = false;
+			document.getElementById("runButton").innerHTML = "Cancel Test";
+		}
+		else
+		{
+			document.getElementById("runButton").innerHTML = "Run Test";
+			document.getElementById("runButton").disabled = false;
+		}
 		testOnDeck = id;
 	}
 	else // Show test result

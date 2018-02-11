@@ -203,13 +203,17 @@ function nextClicked() {
 	}
 	else if (document.getElementById("nextButton").innerHTML == "Create Hypothesis")
 	{
-		// Fill out the selectors
+		// Clear, then fill out the selectors
 		var foodSelect = document.getElementById("foods");
 		var locationSelect = document.getElementById("locations");
-		while (foodSelect.size > 0)
+		var foodChildren = foodSelect.children.length;
+		var locationChildren = locationSelect.children.length;;
+		
+		for (var i = 0; i < foodChildren; i++)
 			foodSelect.remove(foodSelect.selectedIndex);
-		while (locationSelect.size > 0)
+		for (var i = 0; i < locationChildren; i++)
 			locationSelect.remove(locationSelect.selectedIndex);
+		
 		for (var i = 0; i < foods.length; i++)
 		{
 			var option = document.createElement("option");

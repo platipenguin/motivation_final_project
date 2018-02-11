@@ -292,7 +292,7 @@ scriptData = {
 				"hidden":false,
 				"asked":false,
 				"question":"What were you doing that day?",
-				"answer":"Oh, that's the day I fell! Yeah, Sue and I were out jogging in Memorial Park. They haven't paved the path around the lake in ages, so a broke off and I slid and fell right into the lake! Thanks for reminding me, I still need to yell at the Mayor about that.",
+				"answer":"Oh, that's the day I fell! Yeah, me and Sue were out jogging in Memorial Park. They haven't paved the path around the lake in ages, so a piece broke off and I slid and fell right into the lake! Thanks for reminding me, I still need to yell at the Mayor about that.",
 				"locations":["Memorial Park Lake"],
 				"foods":["Water"],
 				"unlocks":[4],
