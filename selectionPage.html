@@ -1,14 +1,27 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <title>Digital Case</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="selectionPage.css">
         <script src="selectionPage.js"></script>
     </head>
     <body>
-        <p>Enter your last name:</p>
-        <input type="text" id="userName">
-        <p>Enter your partner's last name:</p>
-        <input type="text" id="partnerName">
-        <button onclick="goToActivity('clinician');">Clinician</button>
-        <button onclick="goToActivity('index');">Interviewer</button>
+        <h1 class="centered">Digital Case Study</h1>
+        <p class="centered">Enter your last name: <input type="text" id="userName"></p>
+        <p class="centered">Enter your partner's last name: <input type="text" id="partnerName"></p>
+        <br>
+        <h2 class="centered">Select Your Role</h2>
+        <div class="centered">
+            <button onclick="goToActivity('clinician');">
+                <span class="roleTitle">Clinician</span>
+                <span class="roleInfo"><br><br>Run tests to identify the microbe causing the outbreak</span>
+            </button>
+            <button onclick="goToActivity('interviewer');">
+                <span class="roleTitle">Interviewer</span>
+                <span class="roleInfo"><br><br>Interview patients to find the epidemic's source</span>
+            </button>
+        </div>
+        
     </body>
 </html>
