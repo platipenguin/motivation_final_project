@@ -6,7 +6,7 @@ html {
     border-style: solid;
     border-color: black;
     border-radius: 12px;
-    height: 600px;
+    height: 500px;
 }
 
 .email {
@@ -28,11 +28,11 @@ html {
 }
 
 .testOption {
-	width: 150px;
-	height: 150px;
+	width: 110px;
+	height: 110px;
 	margin: 5px;
-	font-size: 1.1em;
-	line-height: 25px;
+	line-height: 20px;
+	vertical-align: middle;
 }
 
 th {
@@ -62,7 +62,6 @@ li {
 
 .vertical {
     overflow-y: auto;
-	height: 600px;
 }
 
 .horizontal {
@@ -102,18 +101,19 @@ li {
     border-style: solid;
     border-color: black;
     border-radius: 12px;
-    height: 240px;
+	text-align: center;
+    height: 200px;
 }
 
 #completeTests {
     border-style: solid;
     border-color: black;
     border-radius: 12px;
-    height: 353px;
+    height: 293px;
 }
 
 #notes {
-	min-height: 600px;
+	min-height: 500px;
 	min-width: 100%;
 	font-size: 1.2em;
 	border-style: solid;
@@ -154,6 +154,17 @@ li {
 	position: relative;
 	width: 10%;
 	left: 45%;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
 

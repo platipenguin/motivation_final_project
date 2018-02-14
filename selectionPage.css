@@ -7,21 +7,57 @@ input {
     font-family: serif;
 }
 
-button {
-    width: 250px;
-    height: 100px;
-    margin-top: 0px;
-    cursor: pointer;
-}
-
 .centered {
     text-align: center;
 }
 
-.roleTitle {
-    font-size: 1.4em;
+.dashboard {
+	position: relative;
+	width: 80%;
+	left: 10%;
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    height: 500px;
+	overflow-y: auto;
 }
 
-.roleInfo {
-    font-size: 1em;
+.email {
+	padding: 10px;
+	font-family: Courier;
+	font-size: 1.2em;
+}
+
+.mailButton {
+	width: 200px;
+	height: 75px;
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+.hidden {
+	display: none;
+}
+
+#startButton {
+    width: 250px;
+    height: 100px;
+    margin-top: 0px;
+    cursor: pointer;
+	font-size: 1.8em;
+	font-family: serif;
+}
+
+#mailAlert {
+	text-align: center;
+	font-family: Arial;
+	font-size: 1.5em;
+	color: white;
+}
+
+#mailImg {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	opacity: 0.0;
 }
