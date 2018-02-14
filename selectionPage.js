@@ -3,6 +3,8 @@
 function start() {
 	document.getElementById("titleBox").className = "dashboard hidden";
 	document.getElementById("gotMailBox").className = "dashboard";
+	localStorage.userName = document.getElementById("userName").value;
+    localStorage.partnerName = document.getElementById("partnerName").value;
 	setTimeout(startMailAnimation, 100);
 }
 
@@ -16,17 +18,24 @@ function startMailAnimation() {
 function openEmail() {
 	document.getElementById("gotMailBox").className = "hidden";
 	document.getElementById("mailBox").className = "dashboard";
+	insertNames(document.getElementById("introEmail"));
 }
 
 // Called when the user clicks on one of the role selection buttons
 // Redirects the web browser to the file for that role
 function goToActivity(page) {
-    localStorage.userName = document.getElementById("userName");
-    localStorage.partnerName = document.getElementById("partnerName");
-    
     var newURL = window.location.href;
     var index = newURL.lastIndexOf('/') + 1;
     newURL = newURL.slice(0, index);
     newURL += page + ".html";
     window.location.assign(newURL);
+}
+
+// Adds the user supplied surnames to the specified element's innerHTML
+// Searches the innerHTML, replacing '*' with the user's name and '#' with their partner's name
+function insertNames(element) {
+	var string = element.innerHTML;
+	string = string.replace("*", localStorage.userName);
+	string = string.replace("#", localStorage.partnerName);
+	element.innerHTML = string;
 }

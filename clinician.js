@@ -23,6 +23,7 @@ function init() {
 		b.className = "testOption";
 		testList.appendChild(b);
 	}
+	insertNames(document.getElementById("reportText"));
 }
 
 // Called when a test option has been clicked.
@@ -260,12 +261,13 @@ function openEmail() {
 	else
 	{
 		emailBody += "Great work. Your results show that Salmonella is the pathogen behind this outbreak, and the DNA fingerprint data you sent also proves that all the patients contracted it from the same source.<br><br>";
-		emailBody += "The clinical side of this investigation is done. Chances are, though, Agent ** is still interviewing patients. Go see if you can help them out. The information you've gathered should help dial in the questions.<br><br>";
+		emailBody += "The clinical side of this investigation is done. Chances are, though, Agent # is still interviewing patients. Go see if you can help them out. The information you've gathered should help dial in the questions.<br><br>";
 		emailBody += "Again, great work, agent. Just remember, this isn't over yet!<br><br>";
 	}
 	
 	emailBody += "Best,<br><br>Viola Greene<br><br>Director, Office of Public Health Preparedness and Response<br>Centers for Disease Control";
 	document.getElementById("directorMailText").innerHTML = emailBody;
+	insertNames(document.getElementById("directorMailText"));
 }
 
 // Called when the user clicks the 'Show Notepad' button
@@ -296,4 +298,13 @@ function pathogens() {
 		document.getElementById("pathogensButton").innerHTML = "Show Pathogens";
 		document.getElementById("pathogenList").className = "pathogenWrapper hidden";
 	}
+}
+
+// Adds the user supplied surnames to the specified element's innerHTML
+// Searches the innerHTML, replacing '*' with the user's name and '#' with their partner's name
+function insertNames(element) {
+	var string = element.innerHTML;
+	string = string.replace("*", localStorage.userName);
+	string = string.replace("#", localStorage.partnerName);
+	element.innerHTML = string;
 }

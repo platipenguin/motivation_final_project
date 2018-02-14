@@ -199,7 +199,7 @@ function nextClicked() {
 		document.getElementById("nextButton").className = "hidden";
 		document.getElementById("testBox").className = "mainDisplay hidden";
 		document.getElementById("reportBox").className = "mainDisplay";
-		// TODO: Insert agent names into email from localStorage
+		insertNames(document.getElementById("regards"));
 	}
 	else if (document.getElementById("nextButton").innerHTML == "Create Hypothesis")
 	{
@@ -321,7 +321,14 @@ function randomFloat(min, max) {
 	return Math.random() * (max - min) + min;
 }
 
-
+// Adds the user supplied surnames to the specified element's innerHTML
+// Searches the innerHTML, replacing '*' with the user's name and '#' with their partner's name
+function insertNames(element) {
+	var string = element.innerHTML;
+	string = string.replace("*", localStorage.userName);
+	string = string.replace("#", localStorage.partnerName);
+	element.innerHTML = string;
+}
 
 
 
