@@ -8,6 +8,10 @@
         <script src="interviewer.js"></script>
 	</head>
     <body onload="init();">
+		<div id="controlButtons">
+			<button id="notesButton" class="bottomButton" onclick="toggleNotes();">Show Notepad</button>
+			<button id="nextButton" class="bottomButton" onclick="nextClicked();">Create Hypothesis</button>
+		</div>
 		<table style="width:100%">
 			<td style="width:70%">
 				<div id="textBox" class="mainDisplay" onmousedown="finishTyping();">
@@ -69,9 +73,5 @@
 				<textarea id="notes" class="hidden" spellcheck=false></textarea>
 			</td>
 		</table>
-        
-		
-		<button id="notesButton" class="bottomButton" onclick="toggleNotes();">Show Notepad</button>
-		<button id="nextButton" class="bottomButton" onclick="nextClicked();">Create Hypothesis</button>
     </body>
 </html>

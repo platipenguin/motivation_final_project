@@ -80,6 +80,11 @@ li {
     display: none;
 }
 
+#controlButtons {
+	text-align: center;
+	background-color: LightGray;
+}
+
 #testInfo {
 	text-align: center;
 	font-size: 1.1em;

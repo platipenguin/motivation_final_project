@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Digital Case</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="digital-case.css">
+        <script src="digital-case.js"></script>
+    </head>
+    <body>
+		<div id="titleBox">
+			<h1 class="centered">Digital Case Study</h1>
+			<br>
+			<p class="centered">Enter your last name: <input type="text" id="userName"></p>
+			<p class="centered">Enter your partner's last name: <input type="text" id="partnerName"></p>
+			<br>
+			<br>
+			<div class="centered">
+				<button id="startButton" onclick="start();">Start</button>
+			</div>
+		</div>
+        <div id="gotMailBox" class="dashboard hidden">
+			<p id="mailAlert">You've got mail!</p>
+			<img src="images/envelope.png" id="mailImg"></img>
+			<div class="centered">
+				<button id="mailButton" onclick="openEmail();">Open Mail<img>
+			</div>
+		</div>
+		<div id="mailBox" class="dashboard hidden">
+			<p id="introEmail" class="email">
+				Agent *,<br><br>
+				The CDC has received a call from your state’s Department of Health. Hospitals are reporting an unusual uptick in patients coming in with an unknown, foodborne illness. 
+				I’m assigning you and Agent # to this investigation. Decide between yourselves who will interview patients, and who will perform clinical tests.<br><br>
+				The Interviewer’s job is to talk to patients and gather clues about what food made them sick and where it came from. 
+				Ask about specific foods and locations, and see if there’s any overlap that might point us towards the epidemic’s source. 
+				Once you think you’ve found it, we’ll run a statistical test to see whether or not you’re right.<br><br>
+				At the same time, the Clinician will perform tests on samples from patients. Their job is to determine what pathogen is making all these people sick. 
+				We also need to know if all the patients got sick from the same source, so once they’ve identified the pathogen, the Clinican will need to perform a DNA Fingerprint test to make sure all the patients were infected by the same strain of microbe. 
+				Unfortunately, our lab space is limited, so they'll only be able to run two tests at a time. Make them count!<br><br>
+				Once you two have identified the pathogen and found its source, I want you to write up some recommendations. 
+				You’re the ones who have been on the ground, you should have a good idea how we can stem this outbreak and prevent future ones.<br><br>
+				I know you’re both rookies, but I have faith in you two. Just remember, every failed hypothesis means you’re one step closer to the right answer!<br><br>
+				Good luck,<br><br>
+				Viola Greene<br>
+				Director, Office of Public Health Preparedness and Response<br>
+				Centers for Disease Control
+			</p>
+			<div class="centered">
+				<button class="mailButton" onclick="goToActivity('clinician');">Clinician</button>
+				<button class="mailButton" onclick="goToActivity('interviewer');">Interviewer</button>
+			</div>
+		</div>
+		<div id="footer">
+			<p class="references">References & Photo Credits:</p>
+			<ol class="references">
+				<li>Cann, A. (2012). Entamoeba histolytica. Retrieved from: https://www.flickr.com/photos/ajc1/7162653329/</li>
+				<li>Fooladi, A. I., Tavakoli, H. R., & Naderi, A. (2010). Detection of enterotoxigenic Staphylococcus aureus isolates in domestic dairy products. <i>Iranian journal of microbiology, 2</i>(3), 137.</li>
+				<li>Gregor, C. (2018). Envelope free iconl. Retrieved from: https://www.flaticon.com/free-icon/envelope_126516#term=email&page=1&position=1 Creative Commons BY 3.0.</li>
+				<li>Huang, Y., Chen, X., Xia, Y., Wu, S., Duan, N., Ma, X., & Wang, Z. (2014). Selection, identification and application of a DNA aptamer against Staphylococcus aureus enterotoxin A. <i>Analytical Methods, 6</i>(3), 690-697.</li>
+				<li>McClane, B. A., & Strouse, R. J. (1984). Rapid detection of Clostridium perfringens type A enterotoxin by enzyme-linked immunosorbent assay. <i>Journal of clinical microbiology, 19</i>(2), 112-115.</li>
+				<li>Microorganisms, F. P., & Toxins, N. (2005). Bad bug book. <i>US Food and Drug Administration: Silver Spring, MD, USA.</i></li>
+				<li>Morandi, S., Brasca, M., Lodi, R., Cremonesi, P., & Castiglioni, B. (2007). Detection of classical enterotoxins and identification of enterotoxin genes in Staphylococcus aureus from milk and dairy products. <i>Veterinary microbiology, 124</i>(1-2), 66-72.</li>
+				<li>Paul, J., Srivastava, S., & Bhattacharya, S. (2007). Molecular methods for diagnosis of Entamoeba histolytica in a clinical setting: an overview. <i>Experimental parasitology, 116</i>(1), 35-43.</li>
+				<li>Wu, S., Duan, N., Gu, H., Hao, L., Ye, H., Gong, W., & Wang, Z. (2016). A Review of the Methods for Detection of Staphylococcus aureus Enterotoxins. <i>Toxins, 8</i>(7), 176.</li>
+			</ol>
+		</div>
+		
+    </body>
+</html>

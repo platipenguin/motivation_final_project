@@ -8,6 +8,12 @@
         <script src="clinician.js"></script>
 	</head>
     <body onload="init();">
+		<div id="controlButtons">
+			<button id="notesButton" class="bottomButton" onclick="notepad();">Show Notepad</button>
+			<button id="pathogensButton" class="bottomButton" onclick="pathogens();">Show Pathogens</button>
+			<button id="runButton" class="bottomButton" disabled onclick="runTest();">Run Test</button>
+			<button id="reportButton" class="bottomButton" onclick="writeReport();">Write Report</button>
+		</div>
         <table class="container" style="width: 100%;">
             <td style="width: 40%;">
                 <div id="bench" class="dashboard">
@@ -138,9 +144,5 @@
                 </td>
             </table>
         </div>
-        <button id="notesButton" class="bottomButton" onclick="notepad();">Show Notepad</button>
-		<button id="pathogensButton" class="bottomButton" onclick="pathogens();">Show Pathogens</button>
-        <button id="runButton" class="bottomButton" disabled onclick="runTest();">Run Test</button>
-        <button id="reportButton" class="bottomButton" onclick="writeReport();">Write Report</button>
     </body>
 </html>

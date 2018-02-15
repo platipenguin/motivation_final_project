@@ -23,7 +23,6 @@ function init() {
 		b.className = "testOption";
 		testList.appendChild(b);
 	}
-	insertNames(document.getElementById("reportText"));
 }
 
 // Called when a test option has been clicked.
@@ -74,7 +73,7 @@ function testOptionClicked(clickedID) {
 function runTest() {
 	var t = document.getElementById(`${testOnDeck}`);
 	
-	// Handle cancelling the test
+	// Handle canceling the test
 	if (document.getElementById("runButton").innerHTML == "Cancel Test")
 	{
 		if (runningTests.indexOf(testOnDeck) != -1)
@@ -101,31 +100,21 @@ function runTest() {
 		document.getElementById("runButton").disabled = true;
 		return;
 	}
-	
-	if (testData.data[testOnDeck].time != 0)
+
+	if (runningTests.length < 2)
 	{
-		if (runningTests.length < 2)
-		{
-			t.innerHTML = testData.data[testOnDeck].name + "<br>" + testData.data[testOnDeck].time + "s";
-			document.getElementById("tests").removeChild(t);
-			document.getElementById("progressTests").appendChild(t);
-			document.getElementById("runButton").disabled = true;
-			runningTests.push(testOnDeck);
-			runningTestTimes.push(testData.data[testOnDeck].time);
-			if (tickFunction == null)
-				tickFunction = setTimeout(tickClock, 1100);
-		}
-		else
-		{
-			return;
-		}
+		t.innerHTML = testData.data[testOnDeck].name + "<br>" + testData.data[testOnDeck].time + "s";
+		document.getElementById("tests").removeChild(t);
+		document.getElementById("progressTests").appendChild(t);
+		document.getElementById("runButton").disabled = true;
+		runningTests.push(testOnDeck);
+		runningTestTimes.push(testData.data[testOnDeck].time);
+		if (tickFunction == null)
+			tickFunction = setTimeout(tickClock, 1100);
 	}
 	else
 	{
-		document.getElementById("tests").removeChild(t);
-		document.getElementById("completeTests").appendChild(t);
-		document.getElementById("runButton").disabled = true;
-		completedTests.push(testData.data[testOnDeck].name);
+		return;
 	}
 	
 	testOnDeck = null;
@@ -144,6 +133,12 @@ function tickClock() {
 		{
 			
 			t.innerHTML = testData.data[runningTests[i]].name;
+			if (document.getElementById("runButton").innerHTML = "Cancel Test")
+			{
+				t.disabled = false;
+				document.getElementById("runButton").innerHTML = "Run Test";
+				document.getElementById("runButton").disabled = true;
+			}			
 			document.getElementById("progressTests").removeChild(t);
 			document.getElementById("completeTests").appendChild(t);
 			completedTests.push(testData.data[runningTests[i]].name);
@@ -179,6 +174,7 @@ function writeReport() {
 		document.getElementById("completeTests").className = "vertical hidden";
 		document.getElementById("tests").className = "dashboard vertical hidden";
 		document.getElementById("emailBox").className = "dashboard";
+		insertNames(document.getElementById("reportText"));
 		
 		var pathSelect = document.getElementById("pathogenSelect");
 		var idSelect = document.getElementById("identificationSelect");
@@ -261,7 +257,7 @@ function openEmail() {
 	else
 	{
 		emailBody += "Great work. Your results show that Salmonella is the pathogen behind this outbreak, and the DNA fingerprint data you sent also proves that all the patients contracted it from the same source.<br><br>";
-		emailBody += "The clinical side of this investigation is done. Chances are, though, Agent # is still interviewing patients. Go see if you can help them out. The information you've gathered should help dial in the questions.<br><br>";
+		emailBody += "The clinical side of this investigation is done. Chances are, though, Agent # is still interviewing patients. Go see if you can help them out. The information you've gathered should help dial in their questions.<br><br>";
 		emailBody += "Again, great work, agent. Just remember, this isn't over yet!<br><br>";
 	}
 	

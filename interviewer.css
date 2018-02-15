@@ -64,6 +64,11 @@
     transition: max-width 5s;
 }
 
+#controlButtons {
+	text-align: center;
+	background-color: LightGray;
+}
+
 #boxHeader {
     height: 150px;
     border-bottom-style: solid;
@@ -84,7 +89,7 @@
 }
 
 #notes {
-	min-height: 600px;
+	min-height: 500px;
 	min-width: 100%;
 	font-size: 1.2em;
 	border-style: solid;
