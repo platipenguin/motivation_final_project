@@ -89,7 +89,7 @@ scriptData = {
 				"qid":5,
 				"hidden":false,
 				"asked":true,
-				"question":"Thanks for your help.",
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
 				"answer":"Sure thing, let me know if you have any more questions.",
 				"locations":null,
 				"foods":null,
@@ -191,6 +191,16 @@ scriptData = {
 				"foods":null,
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":5,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Sure thing, let me know if you have any more questions.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		],
 		"days":[
@@ -254,6 +264,16 @@ scriptData = {
 				"foods":null,
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":6,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Sure thing, let me know if you have any more questions.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		],
 		"week":[
@@ -313,6 +333,16 @@ scriptData = {
 				"answer":"Sure.",
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":6,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Sure thing, let me know if you have any more questions.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		]
 	},
@@ -373,8 +403,8 @@ scriptData = {
 				"qid":5,
 				"hidden":false,
 				"asked":true,
-				"question":"Thanks for your help.",
-				"answer":"Oh, yes, I'm happy to help! Let me know if there's anything else you want to know. I'll be here.",
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Oh yes, I'm happy to help. Tell me if you have any more questions. I'll be here.",
 				"locations":null,
 				"foods":null,
 				"unlocks":null,
@@ -463,6 +493,16 @@ scriptData = {
 				"foods":null,
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":4,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Oh yes, I'm happy to help. Tell me if you have any more questions. I'll be here.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		],
 		"days":[
@@ -546,6 +586,16 @@ scriptData = {
 				"foods":null,
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":8,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Oh yes, I'm happy to help. Tell me if you have any more questions. I'll be here.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		],
 		"week":[
@@ -589,6 +639,16 @@ scriptData = {
 				"foods":null,
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":4,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Oh yes, I'm happy to help. Tell me if you have any more questions. I'll be here.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		]
 	},
@@ -641,7 +701,7 @@ scriptData = {
 				"qid":5,
 				"hidden":false,
 				"asked":true,
-				"question":"Thanks for your help.",
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
 				"answer":"Sure, just tell me if you need something else.",
 				"locations":null,
 				"foods":null,
@@ -743,6 +803,16 @@ scriptData = {
 				"foods":null,
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":5,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Sure, just tell me if you need something else.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		],
 		"days":[
@@ -796,6 +866,16 @@ scriptData = {
 				"foods":null,
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":5,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Sure, just tell me if you need something else.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		],
 		"week":[
@@ -849,6 +929,16 @@ scriptData = {
 				"foods":null,
 				"unlocks":null,
 				"moves":"between"
+			},{
+				"qid":5,
+				"hidden":false,
+				"asked":true,
+				"question":"Thanks for your help. I'm going to talk to one of the other patients for a bit.",
+				"answer":"Sure, just tell me if you need something else.",
+				"locations":null,
+				"foods":null,
+				"unlocks":null,
+				"moves":"out"
 			}
 		]
 	}

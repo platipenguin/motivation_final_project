@@ -18,7 +18,7 @@ var baseResponseTime = 40;
 var nextResponseTypeTime = 0;
 var currentResponseText = "";
 var animateTicker = 0;
-const MAX_QUESTIONS = 8;
+const MAX_QUESTIONS = 9;
 
 // Called when the body of the page finishes loading. Sets up the interview activity.
 function init() {
