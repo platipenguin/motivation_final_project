@@ -23,6 +23,7 @@ function init() {
 		b.className = "testOption";
 		testList.appendChild(b);
 	}
+	setTimeout(displaySMS, 300000);
 }
 
 // Called when a test option has been clicked.
@@ -306,6 +307,27 @@ function pathogens() {
 		document.getElementById("pathogensButton").innerHTML = "Show Pathogens";
 		document.getElementById("pathogenList").className = "pathogenWrapper hidden";
 	}
+}
+
+// Creates an alert that displays an SMS message from the CDC director
+// Gives the user an update on the outbreak and reminds them to communicate with their partner
+function displaySMS() {
+	var txt = `New SMS Message\nFrom: Director Greene\n\nI hope your tests are going well, hospitals are reporting more cases.\nDon't forget to communicate with agent ${localStorage.partnerName}.\nYour information about onset times could help focus their interviews.\n\n`;
+	var d = new Date();
+	var hrs = d.getHours();
+	var timeOfDay = "";
+	if (hrs > 12)
+	{
+		hrs -= 12;
+		timeOfDay = "pm";
+	}
+	else
+	{
+		timeOfDay = "am";
+	}
+	var mins = (d.getMinutes() < 10) ? "0" + d.getMinutes() : d.getMinutes();
+	txt += `Received ${hrs}:${mins}${timeOfDay}`;
+	alert(txt);
 }
 
 // Adds the user supplied surnames to the specified element's innerHTML

@@ -33,6 +33,7 @@ function init() {
 		questionOptions[i] = document.getElementById(i + "");
 	}
 	displayQuestions(scriptData.conv0.base);
+	setTimeout(displaySMS, 300000);
 }
 
 // Displays questions on the screen.
@@ -330,7 +331,26 @@ function insertNames(element) {
 	element.innerHTML = string;
 }
 
-
+// Creates an alert that displays an SMS message from the CDC director
+// Gives the user an update on the outbreak and reminds them to communicate with their partner
+function displaySMS() {
+	var txt = `New SMS Message\nFrom: Director Greene\n\nI hope your interviews are going well, hospitals are reporting more cases.\nDon't forget to communicate with agent ${localStorage.partnerName}.\nWhat patients ate could help them decide what tests to run.\n\n`;
+	var d = new Date();
+	var hrs = d.getHours();
+	var timeOfDay = "";
+	if (hrs > 12)
+	{
+		hrs -= 12;
+		timeOfDay = "pm";
+	}
+	else
+	{
+		timeOfDay = "am";
+	}
+	var mins = (d.getMinutes() < 10) ? "0" + d.getMinutes() : d.getMinutes();
+	txt += `Received ${hrs}:${mins}${timeOfDay}`;
+	alert(txt);
+}
 
 
 
