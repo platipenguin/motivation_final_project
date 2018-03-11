@@ -162,6 +162,25 @@ li {
 	left: 45%;
 }
 
+#help {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	border-style: solid;
+	border-color: black;
+	border-width: 5px;
+	padding: 10px;
+	background-color: lavenderblush;
+	overflow-y: auto;
+}
+
+#closeHelp {
+	width: 100px;
+	height: 40px;
+}
+
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;

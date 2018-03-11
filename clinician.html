@@ -9,6 +9,7 @@
 	</head>
     <body onload="init();">
 		<div id="controlButtons">
+			<button id="helpButton" class="bottomButton" onclick="showHelp();">Show Help</button>
 			<button id="notesButton" class="bottomButton" onclick="notepad();">Show Notepad</button>
 			<button id="pathogensButton" class="bottomButton" onclick="pathogens();">Show Pathogens</button>
 			<button id="runButton" class="bottomButton" disabled onclick="runTest();">Run Test</button>
@@ -144,5 +145,16 @@
                 </td>
             </table>
         </div>
+		<div id="help" class="hidden">
+			<p>
+				Click on the tests under 'All Tests' to see information about each one.<br><br>
+				Click on the 'Run Test' button when you have a test selected to begin running it. You can run up to 2 tests at the same time.<br><br>
+				Click on a test under 'Running Tests' then click on the 'Cancel Test' button to stop running it.<br><br>
+				Once a test is finished, click on it under 'Completed Tests' to see its results.<br><br>
+				Click on the 'Show Pathogens' button to see a list of all the microbes that could be causing the outbreak.<br><br>
+				Click on 'Write Report' once you think you've run enough tests to identify the pathogen infecting the five patients.
+			</p>
+			<button id="closeHelp" onclick="closeHelp();">Close</button>
+		</div>
     </body>
 </html>

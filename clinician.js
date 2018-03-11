@@ -266,6 +266,18 @@ function openEmail() {
 	insertNames(document.getElementById("directorMailText"));
 }
 
+// Called when the user clicks the 'Show Help' button
+// Displays a text box showing information about how to run tests
+function showHelp() {
+	document.getElementById("help").className = "";
+}
+
+// Called when the user clicks the 'Close' button in the help box
+// Hides the help box
+function closeHelp() {
+	document.getElementById("help").className = "hidden";
+}
+
 // Called when the user clicks the 'Show Notepad' button
 // Toggles the notepad
 function notepad() {
