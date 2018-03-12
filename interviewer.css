@@ -64,6 +64,15 @@
     transition: max-width 5s;
 }
 
+.needAnswer {
+	background-color: white;
+	transition: background-color 1s;
+}
+
+.incorrect {
+	background-color: red;
+}
+
 #controlButtons {
 	text-align: center;
 	background-color: LightGray;

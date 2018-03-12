@@ -200,7 +200,16 @@ function nextClicked() {
 		document.getElementById("nextButton").className = "hidden";
 		document.getElementById("testBox").className = "mainDisplay hidden";
 		document.getElementById("reportBox").className = "mainDisplay";
+		insertNames(document.getElementById("prereport"));
 		insertNames(document.getElementById("regards"));
+		var pathogenSelect = document.getElementById("pathogens");
+		var microbeOptions = ["--Select--", "Norovirus", "Campylobacter jejuni", "Clostridium perfringens", "Salmonella enterica", "Staphylococcus aureus", "Entamoeba histolytica", "Giardia lamblia"];
+		for (var i = 0; i < microbeOptions.length; i++)
+		{
+			var option = document.createElement("option");
+			option.text = microbeOptions[i];
+			pathogenSelect.add(option);
+		}
 	}
 	else if (document.getElementById("nextButton").innerHTML == "Create Hypothesis")
 	{
@@ -288,9 +297,15 @@ function testHypothesis() {
 // Called when the user clicks on the 'Send Email' button.
 // Checks if there's any text in the report, then moves the user to the final email screen.
 function sendEmail() {
-	if (document.getElementById("report").value == "")
+	if (document.getElementById("pathogens").value != "Salmonella enterica")
 	{
-		document.getElementById("report").focus();
+		document.getElementById("pathogens").className = "incorrect";
+		setTimeout(revertToWhite, 100);
+	}
+	else if (document.getElementById("report").value == "")
+	{
+		document.getElementById("report").className = "incorrect email";
+		setTimeout(revertToWhite, 100);
 	}
 	else
 	{
@@ -298,6 +313,11 @@ function sendEmail() {
 		document.getElementById("gotMailBox").className = "mainDisplay";
 		setTimeout(startMailAnimation, 100);
 	}
+}
+
+function revertToWhite() {
+	document.getElementById("pathogens").className = "needAnswer";
+	document.getElementById("report").className = "email needAnswer";
 }
 
 function startMailAnimation() {
